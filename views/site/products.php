@@ -30,7 +30,7 @@ $this->title = 'My Yii Application';
     <h5 class="card-title navbar-light bg-light position-relative text-center">Панель Администратора</h5>
     <nav class="navbar navbar-light bg-light">
     <a href="#" class="btn btn-info">Список Заказов</a>
-    <a href="/site/products" class="btn btn-info">Управление товарами</a>
+    <a href="/site/about" class="btn btn-info">Управление товарами</a>
     
     <a href="#" class="btn btn-info">Управление категориями</a>
 
