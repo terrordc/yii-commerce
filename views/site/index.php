@@ -13,7 +13,7 @@ $this->registerJsFile('../js/main.js');
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4"> </h1>
     </div>
-asdasdasdasd
+    
     <div class="body-content">
 
         <?php
@@ -69,20 +69,12 @@ asdasdasdasd
             <div class="viewSlide mx-4"></div>
             </div>
         </div>
-        <div id="viewSlider "  class="m-auto d-flex justify-content-around mt-4">
-            <div class="d-flex flex-row">
-                <button class="prev btn btn-primary mx-2" id="prev">Назад</button>
-                <button class=" next btn btn-primary mx-2" id="next">Вперёд</button>
-            </div>
-        </div>
+              <div id="viewSlider "  class="m-auto d-flex justify-content-around mt-4">
+              <div class="d-flex flex-row">
+                  <button class="prev btn btn-primary mx-2" id="prev">Назад</button>
+                  <button class=" next btn btn-primary mx-2" id="next">Вперёд</button>
+              </div>
+          </div>
+      </div>
     </div>
-
-
-</div>
-
-
-
-
-
-
 </div>
