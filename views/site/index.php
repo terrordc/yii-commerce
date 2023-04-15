@@ -1,6 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
+use yii\helpers\Url;
 
 $this->title = 'My Yii Application';
 ?>
@@ -16,18 +17,24 @@ $this->title = 'My Yii Application';
 
     <div class="body-content">
 
-
     <?php
+    
         if(Yii::$app->user->identity->admin == 1){
+            
     echo '
     <h5 class="card-title navbar-light bg-light position-relative text-center">Панель Администратора</h5>
     <nav class="navbar navbar-light bg-light">
     <a href="#" class="btn btn-info">Список Заказов</a>
     <a href="#" class="btn btn-info">Управление товарами</a>
+    
+    
     <a href="#" class="btn btn-info">Управление категориями</a>
 
 </nav>
+
+
     ';
+    
      } 
             ?>
 
