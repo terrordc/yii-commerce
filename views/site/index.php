@@ -12,7 +12,7 @@ $this->title = 'My Yii Application';
 
        
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">ПРИВЕт</a></p>
     </div>
 
     <div class="body-content">
