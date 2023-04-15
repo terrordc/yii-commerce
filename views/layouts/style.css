@@ -1,0 +1,12 @@
+
+
+
+   a.rollover {
+    background: url(https://s0.rbk.ru/v6_top_pics/resized/590xH/media/img/1/58/755663202278581.jpg); /* Путь к файлу с исходным рисунком  */
+    display: block; /*  Рисунок как блочный элемент */
+    width: 196px; /* Ширина рисунка */
+    height: 183px; /*  Высота рисунка */
+   }
+   a.rollover:hover {
+    background: url(https://s0.rbk.ru/v6_top_pics/resized/590xH/media/img/6/60/755663230090606.jpg); /* Путь к файлу с заменяемым рисунком  */
+}
