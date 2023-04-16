@@ -27,16 +27,16 @@ class RegForm extends User
     public function rules()
     {
         return [
-            [['fio', 'login', 'email', 'password', 'passwordConfirm', 'agree'], 'required', 'message' => 'Поле обязательно для заполнения'],
-            ['fio', 'match', 'pattern' => '/^[А-Яа-я\s\-]{5,}$/u', 'message' => 'Только кирилица, пробелы и дефисы'],
+            [['name','surname', 'login', 'email', 'password', 'passwordConfirm', 'agree'], 'required', 'message' => 'Поле обязательно для заполнения'],
+            [['name','surname','patronymic'], 'match', 'pattern' => '/^[А-Яа-я\s\-]{5,}$/u', 'message' => 'Только кирилица, пробелы и дефисы'],
             ['login', 'match', 'pattern' => '/^[a-zA-Z0-9]{1,}$/u', 'message' => 'Только латинские буквы'],
             ['login', 'unique', 'message' => 'Такой логин уже используется'],
-            ['email', 'email', 'message' => 'Некоретный email адрес'],
+            ['email', 'email', 'message' => 'Некорректный email адрес'],
             ['passwordConfirm', 'compare', 'compareAttribute' => 'password', 'message' => 'Пароли должны совпадать'],
             ['agree', 'boolean'],
             ['agree', 'compare', 'compareValue' => true, 'message' => 'Необходимо согласиться'],
             [['admin'], 'integer'],
-            [['fio', 'login', 'email', 'password'], 'string', 'max' => 255],
+            [['name','surname','patronymic', 'login', 'email', 'password'], 'string', 'max' => 255],
         ];
     }
 
@@ -47,7 +47,9 @@ class RegForm extends User
     {
         return [
             'id' => 'ID',
-            'fio' => 'ФИО',
+            'name' => 'Имя',
+            'surname' => 'Фамилия',
+            'patronymic' => 'Отчество',
             'login' => 'Login',
             'email' => 'Email',
             'password' => 'Пароль',

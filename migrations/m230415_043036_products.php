@@ -14,13 +14,35 @@ class m230415_043036_products extends Migration
     {
         $this->createTable('products', [
             'id' => $this->primaryKey(),
-            'photo' => $this->string()->notNull(),
+            'image_url' => $this->string(),
             'name' => $this->string()->notNull(),
-            'price' => $this->integer(),
+            'description' => $this->text(),
+            'category_id' => $this->integer()->notNull(),
+            'specifications' => $this->text(),
+            'warranty' => $this->integer(),
+            'price' => $this->integer()->notNull(),
             'countryorigin' => $this->string(),
+            'quantity' => $this->integer()->notNull(),
             'release' => $this->date(),
-            'model' => $this->string(),
+            'created_at' => $this->timestamp(),
+            'updated_at' => $this->timestamp(),
+            
         ]);
+        $this->createIndex(
+            'idx-products-category_id',
+            'products',
+            'category_id'
+        );
+
+        // add foreign key for table `user`
+        $this->addForeignKey(
+            'fk-products-category_id',
+            'products',
+            'category_id',
+            'categories',
+            'id',
+            'CASCADE'
+        );
     }
 
     /**
@@ -28,6 +50,16 @@ class m230415_043036_products extends Migration
      */
     public function safeDown()
     {
+        $this->dropForeignKey(
+            'fk-products-category_id',
+            'products'
+        );
+
+        // drops index for column `author_id`
+        $this->dropIndex(
+            'idx-products-category_id',
+            'products',
+        );
         $this->dropTable('products');
     }
 

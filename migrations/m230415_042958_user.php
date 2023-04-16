@@ -1,7 +1,7 @@
 <?php
 
 use yii\db\Migration;
-
+use yii\db\Expression;
 /**
  * Class m230415_042958_user
  */
@@ -14,19 +14,31 @@ class m230415_042958_user extends Migration
     {
         $this->createTable('users', [
             'id' => $this->primaryKey(),
-            'fio' => $this->string()->notNull(),
+            'name'=> $this->string()->notNull(),
+            'surname'=> $this->string()->notNull(),
+            'patronymic'=> $this->string(),
             'login' => $this->string()->unique(),
             'email' => $this->string()->unique(),
-            'password' => $this->string(),
+            'password' => $this->string()->notNull(),
+            'address' => $this->string(),
+            'created_at' => $this->timestamp(),
+            'updated_at' => $this->timestamp(),
             'admin' => $this->boolean()
         ]);
         
+
+
         $this->insert('users', [
             'id' => '1',
-            'fio' => 'врфыгшрв гврфышгв рфышгр',
+            'name' => 'гоги',
+            'surname' => ' ярославов ',
+            'patronymic' => ' петрович',
             'login' => 'admin',
             'email' => 'dasdas@mail.ru',
             'password' => 'adminWSR',
+            'address'=> '',
+            'created_at' => new Expression('NOW()'),
+            'updated_at' => new Expression('NOW()'),
             'admin' => '1',
         ]);
 
