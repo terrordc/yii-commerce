@@ -19,7 +19,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $this->params['met
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
 
-$this->registerCssFile('../css/rollover.css');
+$this->registerCssFile('css/rollover.css');
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ $this->registerCssFile('../css/rollover.css');
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Home', 'url' => ['/']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Регистрация', 'url' => ['/user/create']],
             Yii::$app->user->isGuest

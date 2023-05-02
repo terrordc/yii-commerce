@@ -15,8 +15,8 @@ class m230416_133503_create_carts_table extends Migration
         $this->createTable('{{%carts}}', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer()->notNull(),
-            'created_at' => $this->timestamp(),
-            'updated_at' => $this->timestamp(),
+            'created_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
+            'updated_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
         ]);
 
         $this->createIndex(

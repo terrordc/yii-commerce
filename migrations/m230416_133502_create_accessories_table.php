@@ -15,8 +15,8 @@ class m230416_133502_create_accessories_table extends Migration
         $this->createTable('{{%accessories}}', [
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
-            'created_at' => $this->timestamp(),
-            'updated_at' => $this->timestamp(),
+            'created_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
+            'updated_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
         ]);
     }
 

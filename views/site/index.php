@@ -5,8 +5,8 @@ use yii\helpers\Url;
 use yii\bootstrap5\Html;
 $this->title = 'Главная';
 
-$this->registerCssFile('../css/style.css');
-$this->registerJsFile('../js/main.js');
+$this->registerCssFile('css/style.css');
+$this->registerJsFile('js/main.js');
 ?>
 <div class="site-index">
 

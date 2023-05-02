@@ -8,7 +8,9 @@ use Yii;
  * This is the model class for table "user".
  *
  * @property int $id
- * @property string $fio
+ * @property string $name
+ * @property string $surname
+ * @property string $patronymic
  * @property string $login
  * @property string $email
  * @property string $password

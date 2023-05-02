@@ -24,8 +24,8 @@ class m230415_043036_products extends Migration
             'countryorigin' => $this->string(),
             'quantity' => $this->integer()->notNull(),
             'release' => $this->date(),
-            'created_at' => $this->timestamp(),
-            'updated_at' => $this->timestamp(),
+            'created_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
+            'updated_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
             
         ]);
         $this->createIndex(

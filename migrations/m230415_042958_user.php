@@ -21,8 +21,8 @@ class m230415_042958_user extends Migration
             'email' => $this->string()->unique(),
             'password' => $this->string()->notNull(),
             'address' => $this->string(),
-            'created_at' => $this->timestamp(),
-            'updated_at' => $this->timestamp(),
+            'created_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
+            'updated_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
             'admin' => $this->boolean()
         ]);
         

@@ -17,8 +17,8 @@ class m230416_133504_create_orders_table extends Migration
             'user_id' => $this->integer()->notNull(),
             'status' => $this->string(),
             'declined_message' => $this->text(),
-            'created_at' => $this->timestamp(),
-            'updated_at' => $this->timestamp(),
+            'created_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
+            'updated_at' => $this->timestamp()->defaultValue(date('Y-m-d H:i:s')),
         ]);
 
         $this->createIndex(
